@@ -21,14 +21,14 @@ Park.prototype = {
     this.enclosure = filteredEnclosure;
   },
 
-  offspringCount: function(){
-    counter = 0;
+  offspringMore2: function(){
+    var dinosaurs = []
     for (var dinosaur of this.enclosure){
       if (dinosaur.offspring > 2){
-        counter++;
+        dinosaurs.push(dinosaur);
       }
     }
-    return counter;
+    return dinosaurs;
   },
 
   annualPop: function(years){

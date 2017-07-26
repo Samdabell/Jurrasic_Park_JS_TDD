@@ -44,7 +44,8 @@ describe('Park', function(){
 
   it('should get all dinosaurs with offspring count > 2', function(){
     park.enclosure = dinosaurs;
-    assert.strictEqual(park.offspringCount(), 3);
+    expected = [dinosaur3, dinosaur4, dinosaur5];
+    assert.deepEqual(park.offspringMore2(), expected);
   });
 
   it('should calculate the number of dinosaurs after year 1, starting with 1', function(){
